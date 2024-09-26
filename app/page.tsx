@@ -40,8 +40,8 @@ export default function App() {
 
   return (
     <main>
-      <h1>My todos</h1>
-      <button onClick={createTodo}>+ new</button>
+      <h1>HARCO</h1>
+      <button onClick={createTodo}>+ Novo condomínio</button>
       <ul>
         {todos.map((todo) => (
           <li key={todo.id}>{todo.content}</li>
