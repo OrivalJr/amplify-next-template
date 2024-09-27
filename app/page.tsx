@@ -33,10 +33,15 @@ export default function App() {
   }, []);
 
   function createTodo() {
-    client.models.Todo.create({
-      content: window.prompt("Novo condomínio"),
-    });
-  }
+    const newTodoContent = window.prompt("Novo condomínio");
+
+    // Verifica se o usuário digitou algo antes de criar o registro
+    if (newTodoContent) {
+        client.models.Todo.create({
+            content: newTodoContent,
+        });
+    }
+}
 
   return (
     <main>
